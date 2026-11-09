@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spain with Poppy · 13–28 Nov 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --paper:#F3F5F2;
+  --surface:#FFFFFF;
+  --surface-2:#EBEFEC;
+  --ink:#12273C;
+  --ink-soft:#4B6076;
+  --muted:#71818D;
+  --line:#D9E0DC;
+  --line-strong:#B9C5BE;
+  --cobalt:#1D5B8E;
+  --cobalt-soft:#E4EDF5;
+  --ochre:#A85D12;
+  --ochre-soft:#FAEBD9;
+  --olive:#35654A;
+  --olive-soft:#E2EFE6;
+  --rose:#9B2F42;
+  --rose-soft:#FAE6E9;
+  --shadow:0 1px 0 rgba(18,39,60,.06);
+  box-sizing:border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --paper:#0E1417;
+    --surface:#161E23;
+    --surface-2:#1D272D;
+    --ink:#E6EDEA;
+    --ink-soft:#A9BAC4;
+    --muted:#8395A0;
+    --line:#2A363D;
+    --line-strong:#3A4951;
+    --cobalt:#7FB4E0;
+    --cobalt-soft:#13293C;
+    --ochre:#E0A361;
+    --ochre-soft:#36250F;
+    --olive:#86C6A0;
+    --olive-soft:#132A1E;
+    --rose:#E58C9B;
+    --rose-soft:#331219;
+    --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --paper:#0E1417; --surface:#161E23; --surface-2:#1D272D;
+  --ink:#E6EDEA; --ink-soft:#A9BAC4; --muted:#8395A0;
+  --line:#2A363D; --line-strong:#3A4951;
+  --cobalt:#7FB4E0; --cobalt-soft:#13293C;
+  --ochre:#E0A361; --ochre-soft:#36250F;
+  --olive:#86C6A0; --olive-soft:#132A1E;
+  --rose:#E58C9B; --rose-soft:#331219;
+  --shadow:none;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top: calc(118px + env(safe-area-inset-top, 0px)); -webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Archivo", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size:16px; line-height:1.55; font-variant-numeric:tabular-nums;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surface);z-index:60}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 96px}
+a{color:var(--cobalt)}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px;border-radius:4px}
+
+/* ---------- header ---------- */
+header.top{
+  position:sticky; top:env(safe-area-inset-top,0px); z-index:50;
+  background:var(--surface); border-bottom:1px solid var(--line);
+}
+.top-inner{max-width:760px;margin:0 auto;padding:10px 16px 0}
+.brandrow{display:flex;align-items:baseline;gap:10px;justify-content:space-between}
+.brand{font-family:"Fraunces",Georgia,serif;font-weight:800;font-size:19px;letter-spacing:-.015em;line-height:1.1}
+.brand span{color:var(--ochre)}
+.themebtn{background:none;border:1px solid var(--line);color:var(--ink-soft);border-radius:999px;padding:4px 10px;font:inherit;font-size:12px;cursor:pointer}
+.navscroll{display:flex;gap:6px;overflow-x:auto;padding:9px 0 9px;scrollbar-width:none;-ms-overflow-style:none}
+.navscroll::-webkit-scrollbar{display:none}
+.navscroll a{
+  flex:0 0 auto;text-decoration:none;color:var(--ink-soft);font-size:12.5px;font-weight:600;
+  border:1px solid var(--line);border-radius:999px;padding:5px 11px;white-space:nowrap;background:var(--surface)
+}
+.navscroll a.now{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.filters{display:flex;gap:6px;overflow-x:auto;padding-bottom:10px;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.filters button{
+  flex:0 0 auto;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer;
+  background:var(--surface-2);color:var(--ink-soft);border:1px solid transparent;border-radius:999px;padding:5px 11px;white-space:nowrap
+}
+.filters button[aria-pressed="true"]{background:var(--cobalt-soft);color:var(--cobalt);border-color:var(--cobalt)}
+
+/* ---------- generic blocks ---------- */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;margin:16px 0;box-shadow:var(--shadow)}
+h2.sec{font-family:"Fraunces",Georgia,serif;font-weight:800;font-size:22px;letter-spacing:-.02em;margin:34px 0 10px}
+h3.sub{font-size:13px;font-weight:700;color:var(--muted);margin:0 0 10px;letter-spacing:.02em}
+p{margin:0 0 10px}
+.lede{color:var(--ink-soft);font-size:15px}
+.hint{font-size:13.5px;color:var(--muted)}
+
+.alert{border-left:4px solid var(--rose);background:var(--rose-soft);border-radius:0 10px 10px 0;padding:12px 14px;margin:12px 0;font-size:14.5px}
+.alert b{color:var(--rose)}
+.note{border-left:4px solid var(--cobalt);background:var(--cobalt-soft);border-radius:0 10px 10px 0;padding:12px 14px;margin:12px 0;font-size:14.5px}
+
+/* ---------- hero ---------- */
+.hero{padding:26px 0 6px}
+.hero h1{font-family:"Fraunces",Georgia,serif;font-size:clamp(30px,8vw,46px);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin:0 0 6px}
+.hero .sub{font-size:15px;color:var(--ink-soft);margin:0 0 16px}
+.statstrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.statstrip div{background:var(--surface);padding:11px 12px}
+.statstrip b{display:block;font-family:"Fraunces",serif;font-size:21px;font-weight:800;letter-spacing:-.02em}
+.statstrip span{font-size:11.5px;color:var(--muted);font-weight:600}
+
+/* ---------- day ---------- */
+.day{margin:28px 0 0;scroll-margin-top:130px}
+.dayhead{display:flex;gap:14px;align-items:flex-start;padding:0 0 12px;border-bottom:2px solid var(--ink)}
+.datebox{flex:0 0 auto;text-align:center;line-height:1}
+.datebox .d{font-family:"Fraunces",serif;font-size:34px;font-weight:800;letter-spacing:-.04em;display:block}
+.datebox .m{font-size:11px;font-weight:700;color:var(--muted);display:block;margin-top:3px}
+.dayhead .ttl{flex:1 1 auto;min-width:0}
+.dayhead .city{font-size:12.5px;font-weight:700;color:var(--ochre);letter-spacing:.02em}
+.dayhead h2{font-family:"Fraunces",Georgia,serif;font-size:21px;font-weight:600;letter-spacing:-.02em;margin:1px 0 4px;line-height:1.2}
+.daymeta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 12px}
+.daymeta b{font-weight:600;color:var(--ink-soft)}
+
+/* ---------- timeline ---------- */
+.tl{margin:14px 0 0;position:relative}
+.row{display:flex;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:none}
+.time{flex:0 0 52px;font-size:13px;font-weight:700;color:var(--ink-soft);padding-top:2px;letter-spacing:-.02em}
+.time.empty{color:var(--line-strong)}
+.body{flex:1 1 auto;min-width:0}
+.name{font-weight:600;font-size:15.5px;letter-spacing:-.01em}
+.name a{color:inherit;text-decoration:none;border-bottom:1px solid var(--line-strong)}
+.name a:hover{border-color:var(--cobalt);color:var(--cobalt)}
+.addr{font-size:13px;color:var(--muted);margin-top:1px}
+.desc{font-size:14px;color:var(--ink-soft);margin-top:4px}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.chip{font-size:11px;font-weight:700;letter-spacing:.03em;padding:2px 7px;border-radius:5px;border:1px solid transparent;white-space:nowrap}
+.chip.booked{background:var(--olive-soft);color:var(--olive);border-color:var(--olive)}
+.chip.book{background:var(--ochre-soft);color:var(--ochre);border-color:var(--ochre)}
+.chip.option{background:var(--surface-2);color:var(--muted);border-color:var(--line-strong)}
+.chip.free{background:var(--cobalt-soft);color:var(--cobalt)}
+.chip.dogyes{background:var(--olive-soft);color:var(--olive)}
+.chip.dogno{background:var(--rose-soft);color:var(--rose)}
+.chip.dogask{background:var(--ochre-soft);color:var(--ochre)}
+.chip.plain{background:var(--surface-2);color:var(--ink-soft)}
+
+/* poppy band */
+.poppy{display:flex;gap:10px;align-items:flex-start;background:var(--ochre-soft);border-left:4px solid var(--ochre);border-radius:0 10px 10px 0;padding:10px 13px;margin:9px 0}
+.poppy .pt{flex:0 0 52px;font-size:13px;font-weight:700;color:var(--ochre)}
+.poppy .pb{flex:1;font-size:14.5px;font-weight:600;color:var(--ink)}
+.poppy .pb small{display:block;font-weight:500;color:var(--ink-soft);font-size:13px;margin-top:2px}
+
+/* food block */
+.eat{border:1px solid var(--line);border-radius:10px;margin:10px 0;overflow:hidden;background:var(--surface)}
+.eat > .eh{background:var(--surface-2);padding:7px 12px;font-size:12px;font-weight:700;color:var(--ink-soft);letter-spacing:.03em;display:flex;justify-content:space-between;gap:8px}
+.opt{padding:9px 12px;border-top:1px solid var(--line)}
+.opt:first-of-type{border-top:none}
+.opt.is-booked{background:var(--olive-soft)}
+.opt .on{font-weight:600;font-size:14.5px}
+.opt .on a{color:inherit}
+.opt .od{font-size:13.5px;color:var(--ink-soft);margin-top:2px}
+
+/* buttons */
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:13.5px;font-weight:600;
+  padding:9px 13px;border-radius:9px;border:1px solid var(--line-strong);color:var(--ink);background:var(--surface)
+}
+.btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn:hover{border-color:var(--cobalt);color:var(--cobalt)}
+.btn.primary:hover{color:var(--paper);opacity:.9}
+
+details.prep{margin:12px 0 0;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+details.prep > summary{cursor:pointer;padding:10px 13px;font-size:13.5px;font-weight:600;color:var(--ink-soft);list-style:none}
+details.prep > summary::-webkit-details-marker{display:none}
+details.prep > summary::before{content:"▸ ";color:var(--ochre)}
+details.prep[open] > summary::before{content:"▾ "}
+details.prep .pc{padding:0 13px 12px}
+.linklist{display:flex;flex-direction:column;gap:7px}
+.linklist a{display:flex;gap:8px;align-items:baseline;text-decoration:none;font-size:14px;color:var(--ink)}
+.linklist a:hover{color:var(--cobalt)}
+.linklist .k{flex:0 0 auto;font-size:10.5px;font-weight:700;padding:1px 6px;border-radius:4px;background:var(--surface-2);color:var(--muted)}
+.linklist .k.yt{background:var(--rose-soft);color:var(--rose)}
+.linklist .k.sp{background:var(--olive-soft);color:var(--olive)}
+.linklist .k.web{background:var(--cobalt-soft);color:var(--cobalt)}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11.5px;color:var(--muted);font-weight:700;letter-spacing:.03em}
+.scroller{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+ul.tick{list-style:none;padding:0;margin:0}
+ul.tick li{padding:7px 0 7px 26px;border-bottom:1px solid var(--line);position:relative;font-size:14.5px}
+ul.tick li:last-child{border-bottom:none}
+ul.tick li::before{content:"";position:absolute;left:2px;top:14px;width:11px;height:11px;border:1.5px solid var(--line-strong);border-radius:3px}
+ul.tick li.done::before{content:"✓";border-color:var(--olive);color:var(--olive);font-size:11px;line-height:9px;text-align:center;font-weight:800}
+
+footer{margin:46px 0 0;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+
+.hidden{display:none !important}
+@media print{
+  header.top,.btns,.themebtn,.filters{display:none}
+  body{background:#fff}
+  .day{break-inside:avoid}
+  details.prep{display:none}
+}
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="brandrow">
+      <div class="brand">Spain with <span>Poppy</span></div>
+      <button class="themebtn" id="themebtn" type="button">Dark</button>
+    </div>
+    <nav class="navscroll" id="nav"></nav>
+    <div class="filters" id="filters">
+      <button type="button" data-f="all" aria-pressed="true">Everything</button>
+      <button type="button" data-f="book" aria-pressed="false">Bookings only</button>
+      <button type="button" data-f="poppy" aria-pressed="false">Poppy moves</button>
+      <button type="button" data-f="food" aria-pressed="false">Food only</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Sixteen days, six cities,<br>one small dog.</h1>
+    <p class="sub">Barcelona · Seville · Córdoba · Granada · Málaga · Ronda · Madrid — 13 to 28 November 2026</p>
+    <div class="statstrip">
+      <div><b>16</b><span>DAYS</span></div>
+      <div><b>6</b><span>CITIES</span></div>
+      <div><b>3</b><span>CAR RENTALS</span></div>
+      <div><b>4</b><span>HOTELS</span></div>
+    </div>
+  </section>
+
+  <div class="alert">
+    <b>Read this first.</b> Poppy’s export paperwork runs straight through the Madrid sightseeing days. The vet visit, the CEXGAN submission and the SVIF endorsement all have to happen on 25–27 Nov, and the current Madrid plan has you at the Prado and on a tennis court during those mornings. See <a href="#poppy">Poppy’s paperwork</a> and fix the clash before you book anything else in Madrid.
+  </div>
+
+  <div class="panel">
+    <h3 class="sub">How to use this page</h3>
+    <p style="font-size:14.5px;margin:0 0 8px">Every place name is a link — tap it and it opens as a pin in Google Maps. At the bottom of each day there’s a <b>Walk this day</b> button that loads the whole day as one multi-stop route.</p>
+    <p style="font-size:14.5px;margin:0 0 8px">Colour tells you what’s settled: <span class="chip booked">BOOKED</span> is confirmed, <span class="chip book">TO BOOK</span> still needs doing, <span class="chip option">OPTION</span> is a choice, not a plan.</p>
+    <p style="font-size:14.5px;margin:0">Poppy’s drop-offs and pick-ups sit in orange bands so you can’t scroll past them. The <b>Listen before you go</b> drawer on each day has podcast and video links for the car.</p>
+  </div>
+
+  <div id="days"></div>
+
+  <section id="poppy"></section>
+  <section id="logistics"></section>
+
+  <footer>
+    <p>Built from <i>Europe_trip_planning_2026.xlsx</i> on 9 November 2026. Opening hours, sunset times and dog policies change — treat the times here as a plan, not a guarantee, and re-check anything marked “confirm”.</p>
+  </footer>
+</main>
+
+<script>
+/* ---------- helpers ---------- */
+const enc = encodeURIComponent;
+const pin  = q => "https://www.google.com/maps/search/?api=1&query=" + enc(q);
+const route = arr => "https://www.google.com/maps/dir/" + arr.map(enc).join("/");
+const yt = q => "https://www.youtube.com/results?search_query=" + enc(q);
+const sp = q => "https://open.spotify.com/search/" + enc(q);
+
+const DOG = {
+  with:  ['dogyes','Poppy comes'],
+  no:    ['dogno','No dogs'],
+  ask:   ['dogask','Ask at the door'],
+  turns: ['dogask','Take turns'],
+};
+const TAG = {
+  booked: ['booked','BOOKED'],
+  book:   ['book','TO BOOK'],
+  option: ['option','OPTION'],
+  free:   ['free','FREE'],
+  walkin: ['plain','WALK-IN'],
+};
+</script>
+<script>
+/* ============================= THE TRIP ============================= */
+const DAYS = [
+
+/* ---------- 1 ---------- */
+{
+ date:"13", mon:"NOV", dow:"Fri", city:"Barcelona", nav:"13 Fri",
+ title:"Land, then the Gothic Quarter loop",
+ hotel:"Hotel Indigo Barcelona — Plaça Espanya",
+ move:"Air France via Paris · Rental #1 from BCN 12:30",
+ flags:[
+  "7 Portes is down by Barceloneta, not on the Gothic loop, and you don’t reach the centre until about 15:00. Either eat there straight after dropping bags, or drop it and make the Boqueria your lunch.",
+  "Rental #1 must go back no later than 12:30 on Monday — that’s the pick-up time, and returning later costs a whole extra day."
+ ],
+ items:[
+  {t:"11:10", n:"Land BCN Terminal 1", q:"Barcelona El Prat Airport Terminal 1", d:"From Singapore via Paris. Poppy in the cabin carrier. Customs and the pet channel can take an hour or more.", chips:["ARRIVAL"]},
+  {t:"12:30", n:"Pick up Rental #1", q:"Car rental Barcelona El Prat Airport", d:"Note the exact pick-up time on the agreement — Monday’s drop-off must beat it."},
+  {t:"13:30", n:"Hotel Indigo Barcelona — Plaça Espanya", q:"Hotel Indigo Barcelona Plaza Espana", d:"Drop bags, let Poppy out, reset after the flight."},
+  {t:"15:00", n:"Park under Plaça de Catalunya", q:"Parking Placa de Catalunya Barcelona", d:"Underground car park. The whole walk is a loop that ends back here, so you never move the car."},
+  {t:"15:15", n:"La Rambla", q:"La Rambla Barcelona", d:"Look down for the Miró mosaic set into the pavement at Pla de l’Os, and up at the Liceu opera house.", dog:"with"},
+  {t:"15:40", n:"La Boqueria + Escribà", q:"Mercat de la Boqueria Barcelona", d:"Snack stop: fruit cups, jamón, fresh juice in the market, then pastries at Escribà under the modernista mosaic front. Closed Sundays and Mondays — Friday is fine. One of you waits outside with Poppy.", dog:"turns"},
+  {t:"16:30", n:"Plaça Reial", q:"Placa Reial Barcelona", d:"The lampposts beside the fountain are Gaudí’s, from 1879 — his first paid commission for the city.", dog:"with"},
+  {t:"16:45", n:"Plaça de Sant Jaume", q:"Placa de Sant Jaume Barcelona", d:"The Catalan government and the city hall stare at each other across the square.", dog:"with"},
+  {t:"17:00", n:"Temple of Augustus", q:"Temple of Augustus Barcelona", d:"Four Roman columns standing in a small courtyard off Carrer del Paradís, hidden inside a hiking club’s building.", dog:"ask"},
+  {t:"17:15", n:"Cereria Subirà", q:"Cereria Subira Barcelona", d:"Barcelona’s oldest shop, candles since 1761. The curving double staircase is the thing to see. Closed Sundays and Mondays.", dog:"ask"},
+  {t:"17:30", n:"Plaça del Rei", q:"Placa del Rei Barcelona", d:"A quiet medieval square, stone on all four sides. Columbus is said to have been received here after the first voyage.", dog:"with"},
+  {t:"17:45", n:"Cathedral and Plaça Nova", q:"Barcelona Cathedral", d:"Facade, spires and the Roman wall towers from outside. Interior is a no for Poppy.", dog:"no", chips:["OUTSIDE ONLY"]},
+  {t:"18:00", n:"Pont del Bisbe", q:"Pont del Bisbe Barcelona", d:"The neo-Gothic bridge everyone photographs — built in 1928, not medieval. Look for the skull and dagger on the underside.", dog:"with"},
+  {t:"18:10", n:"Plaça de Sant Felip Neri", q:"Placa de Sant Felip Neri Barcelona", d:"The pockmarks on the church wall are from a 1938 bombing that killed children sheltering here.", dog:"with"},
+  {t:"18:30", n:"Portal de l’Àngel shops", q:"Portal de l'Angel Barcelona", d:"Stradivarius, Desigual, Massimo Dutti. Take turns at the door. Then back to the car.", dog:"turns"}
+ ],
+ eat:[
+  {meal:"Lunch", opts:[
+    {n:"7 Portes", q:"7 Portes Barcelona", d:"Since 1836, the classic arròs a banda and paella. Down by the port, so it’s a detour from the Gothic loop.", tag:"book"}
+  ]},
+  {meal:"Dinner", opts:[
+    {n:"Tosca Palau", q:"Tosca Palau Barcelona", d:"Closest to the hotel and the best rated of the three — 4.9 on about 340 reviews.", tag:"option"},
+    {n:"Tapa Fina", q:"Tapa Fina Barcelona", d:"Backup if Tosca is full.", tag:"option"}
+  ]}
+ ],
+ maps:["La Rambla, Barcelona","Mercat de la Boqueria, Barcelona","Placa Reial, Barcelona","Placa de Sant Jaume, Barcelona","Temple of Augustus, Barcelona","Placa del Rei, Barcelona","Barcelona Cathedral","Placa de Sant Felip Neri, Barcelona","Portal de l'Angel, Barcelona"],
+ listen:[
+  {k:"web", l:"Rick Steves — Barcelona City Walk (free audio tour, 1h36)", u:"https://www.ricksteves.com/watch-read-listen/audio/audio-tours/spain-portugal-audio-tours"},
+  {k:"yt", l:"Barcelona Gothic Quarter walking tour", u:yt("Barcelona Gothic Quarter walking tour guide")},
+  {k:"sp", l:"Catalan rumba for the drive in", u:sp("rumba catalana")}
+ ]
+},
+
+/* ---------- 2 ---------- */
+{
+ date:"14", mon:"NOV", dow:"Sat", city:"Barcelona", nav:"14 Sat",
+ title:"Gaudí, start to finish",
+ hotel:"Hotel Indigo Barcelona — Plaça Espanya",
+ move:"Walk and metro — leave the car parked",
+ flags:[
+  "Poppy has no plan today and it’s the day she needs one most. Sagrada Família and Park Güell both refuse dogs, and they run back to back from 09:30 to about 14:00. She has to go back to the hotel before you leave and stay there until after Park Güell."
+ ],
+ items:[
+  {t:"08:45", n:"Breakfast, then Poppy to the hotel", q:"Hotel Indigo Barcelona Plaza Espana", d:"Water, a chew, the fan. She’s in for roughly five hours."},
+  {poppy:"drop", t:"09:00", n:"Drop Poppy at the hotel", d:"Until about 14:00 — two no-dog sites back to back."},
+  {t:"09:30", n:"Sagrada Família", q:"Sagrada Familia Barcelona", d:"Allow 1.5 to 2 hours. The columns branch like a forest canopy; the stained glass runs cool blue-green on the east side and hot red-orange on the west. Compare the fussy, crowded Nativity facade with the stark, angular Passion facade.", tag:"booked", dog:"no", chips:["SG$76.17 · SJ"]},
+  {t:"12:00", n:"Park Güell", q:"Park Guell Barcelona", d:"Timed slot, and you can’t re-enter once you leave, so allow 1.5 to 2 hours. Nature Square, the Hypostyle Room, the Dragon Stairway, the Austria Gardens and the Laundry Room Portico.", tag:"booked", dog:"no", chips:["SG$53.01 · MH"]},
+  {poppy:"collect", t:"14:00", n:"Collect Poppy on the way to Gràcia", d:"Lunch is dog-friendly if you ask for a terrace table."},
+  {t:"15:30", n:"Plaça de la Vila de Gràcia and Plaça del Sol", q:"Placa de la Vila de Gracia Barcelona", d:"The clock tower square, then Plaça del Sol. Gràcia was a separate town until 1897 and still behaves like one.", dog:"with"},
+  {t:"16:15", n:"Passeig de Gràcia facades", q:"Passeig de Gracia Barcelona", d:"Casa Amatller, Casa Lleó Morera and Casa Milà from the pavement. The first three sit side by side in the Illa de la Discòrdia, three architects showing off against each other.", dog:"with", tag:"free"},
+  {t:"17:15", n:"Terrace drink at L’Àtic", q:"L'Atic Barcelona Passeig de Gracia", d:"Sunset is around 17:30 in Barcelona in mid-November, so get up there by 17:10 if you want the light.", dog:"ask"},
+  {t:"18:30", n:"Casa Batlló at night", q:"Casa Batllo Barcelona", d:"Look at the facade from the pavement first — the balconies read as skulls, the roof as a dragon’s back. Then the blue-tiled light well inside, graded dark at the top to pale at the bottom so the light falls evenly.", tag:"booked", dog:"no", chips:["SG$114"]}
+ ],
+ eat:[
+  {meal:"Lunch in Gràcia", opts:[
+    {n:"Tapeo Gràcia", q:"Tapeo Gracia Barcelona", d:"Booked for 14:15. Ask for a terrace table so Poppy can sit with you.", tag:"booked"},
+    {n:"El 68", q:"El 68 Gracia Barcelona", d:"Cheapest and friendliest of the shortlist. Good fallback.", tag:"option"}
+  ]},
+  {meal:"Dinner", opts:[
+    {n:"Colmado Wilmot", q:"Colmado Wilmot Barcelona", d:"Booked 20:30.", tag:"booked"},
+    {n:"La Pepita", q:"La Pepita Barcelona", d:"Open until about 01:30. Book ahead.", tag:"option"},
+    {n:"Celler 39", q:"Celler 39 Barcelona", d:"Third option.", tag:"option"}
+  ]}
+ ],
+ maps:["Sagrada Familia, Barcelona","Park Guell, Barcelona","Placa de la Vila de Gracia, Barcelona","Passeig de Gracia, Barcelona","Casa Mila La Pedrera, Barcelona","Casa Batllo, Barcelona"],
+ listen:[
+  {k:"web", l:"Rick Steves — Barcelona’s Eixample Walk (covers Casa Milà)", u:"https://www.ricksteves.com/watch-read-listen/audio/audio-tours/spain-portugal-audio-tours"},
+  {k:"yt", l:"How Gaudí designed Sagrada Família", u:yt("how Gaudi designed Sagrada Familia documentary")},
+  {k:"yt", l:"Casa Batlló explained", u:yt("Casa Batllo Gaudi explained architecture")}
+ ]
+},
+
+/* ---------- 3 ---------- */
+{
+ date:"15", mon:"NOV", dow:"Sun", city:"Montserrat", nav:"15 Sun",
+ title:"Mountain monastery, then tennis",
+ hotel:"Hotel Indigo Barcelona — Plaça Espanya",
+ move:"Car, about 1 hour each way",
+ flags:[
+  "Book the court before you leave for Montserrat — most of these need a day or more of notice and you won’t have signal on the mountain."
+ ],
+ items:[
+  {t:"07:45", n:"Leave the hotel by car", q:"Hotel Indigo Barcelona Plaza Espana", d:"About an hour up. Take water and a bowl."},
+  {t:"09:15", n:"Montserrat monastery grounds", q:"Montserrat Monastery", d:"The basilica exterior and the viewpoints over the valley. The serrated rock the place is named for — serra, a saw — is the real attraction.", dog:"with", tag:"free"},
+  {t:"09:45", n:"Basilica interior and the Black Madonna", q:"Basilica of Montserrat", d:"La Moreneta, the 12th-century Romanesque Virgin, is the reason pilgrims come. One of you goes in while the other waits outside with Poppy, then swap.", dog:"turns"},
+  {t:"10:15", n:"Sant Miquel viewpoint", q:"Sant Miquel Montserrat", d:"About 45 minutes round trip on a clear path, and the classic view back at the monastery built into the cliff.", dog:"with", tag:"free"},
+  {t:"14:00", n:"Drive back to Barcelona", q:"Barcelona", d:"About an hour."},
+  {t:"16:30", n:"Tennis", q:"", d:"Pick one of the four below and book it the day before at the latest."}
+ ],
+ eat:[
+  {meal:"Lunch at Montserrat", opts:[
+    {n:"Terrace restaurants by the monastery", q:"restaurants Montserrat Monastery", d:"Most have outdoor seating where Poppy can sit with you. No booking needed off-season.", tag:"option"}
+  ]},
+  {meal:"Dinner", opts:[
+    {n:"Open — pick near the court", q:"restaurants Barcelona", d:"Nothing planned. Decide once you know which club you’ve booked.", tag:"option"}
+  ]}
+ ],
+ courts:[
+  ["CN Montjuïc","Playtomic · book 5 days ahead · €18 · 7 min away","CN Montjuic Barcelona"],
+  ["Barcelona Pro Tennis Academy","Book 7 days ahead · €15 · 15 min away","Barcelona Pro Tennis Academy"],
+  ["Vall Parc","Book 2 days ahead · €40 · 20 min away · the scenic one","Vall Parc Tenis Barcelona"],
+  ["Eurofitness Vall d’Hebron","Playtomic · book the day before · €31 · 30 min away","Eurofitness Vall d'Hebron Barcelona"]
+ ],
+ maps:["Montserrat Monastery","Sant Miquel Montserrat","Barcelona"],
+ listen:[
+  {k:"yt", l:"Montserrat and the Black Madonna", u:yt("Montserrat monastery Black Madonna history")},
+  {k:"sp", l:"Escolania de Montserrat — the boys’ choir", u:sp("Escolania de Montserrat")}
+ ]
+},
+
+/* ---------- 4 ---------- */
+{
+ date:"16", mon:"NOV", dow:"Mon", city:"Barcelona → Seville", nav:"16 Mon",
+ title:"Fly south, then Triana at golden hour",
+ hotel:"Legado Magdalena Hotel, Seville",
+ move:"Vueling BCN→SVQ 14:35–16:15 · Rental #1 back · Rental #2 out",
+ flags:[
+  "Ask for an ECO-labelled car at Seville so you can drive into Madrid’s low-emission zone later. Get this in writing at the counter, not over the phone.",
+  "Rental #1 has to be back at BCN no later than 12:30 — the same clock time you picked it up on Friday."
+ ],
+ items:[
+  {t:"10:00", n:"Last Barcelona morning", q:"Barcelona", d:"Nothing booked. Coffee near the hotel, pack."},
+  {t:"11:45", n:"Drop Rental #1 at BCN airport", q:"Car rental return Barcelona El Prat Airport", d:"Fuel up first. Photograph the car and the fuel gauge before you hand the keys over."},
+  {t:"14:35", n:"Vueling BCN → SVQ", q:"Seville Airport", d:"Lands 16:15. About 1h45.", chips:["FLIGHT"]},
+  {t:"16:45", n:"Pick up Rental #2", q:"Car rental Seville Airport", d:"Yours for seven days, all the way to Málaga. This is the ECO car."},
+  {t:"17:45", n:"Legado Magdalena Hotel", q:"Legado Magdalena Hotel Seville", d:"Check in, Poppy out, rest before the evening."},
+  {poppy:"collect", t:"19:20", n:"Poppy comes out with you", d:"The whole Triana evening is outdoors and on a lead."},
+  {t:"19:30", n:"Puente de Isabel II", q:"Puente de Isabel II Seville", d:"The Triana Bridge, about 10 minutes from the hotel. Cast iron, 1852, modelled on a bridge in Paris that no longer exists.", dog:"with", tag:"free"},
+  {t:"19:45", n:"Calle Betis", q:"Calle Betis Seville", d:"The painted houses on the Triana bank, facing the river and the old city. This is the golden-hour walk — sunset is around 18:10 in late November, so you’ll have the lit version rather than the light.", dog:"with", tag:"free"}
+ ],
+ eat:[
+  {meal:"Dinner on Calle Betis", opts:[
+    {n:"Bodega La Niña (Betis 29)", q:"Bodega La Nina Calle Betis Seville", d:"Riverside tapas, 4.9★, open noon to midnight. The pick for Poppy — ask for a terrace table.", tag:"option"},
+    {n:"Turuleta Triana (Betis 41)", q:"Turuleta Triana Seville", d:"4.8★. Opens 20:30 Mon–Thu. Book ahead if you want this one.", tag:"book"},
+    {n:"Betis 7", q:"Betis 7 Seville", d:"Rooftop, river views. Closed Tuesday and Wednesday, so Monday works.", tag:"option"}
+  ]}
+ ],
+ maps:["Seville Airport","Legado Magdalena Hotel Seville","Puente de Isabel II, Seville","Calle Betis, Seville"],
+ listen:[
+  {k:"web", l:"Rick Steves — Sevilla City Walk (free audio tour, 1h08)", u:"https://www.ricksteves.com/watch-read-listen/audio/audio-tours/spain-portugal-audio-tours"},
+  {k:"sp", l:"Flamenco from Triana", u:sp("flamenco Triana")},
+  {k:"yt", l:"Why Triana is Seville’s flamenco barrio", u:yt("Triana Seville flamenco neighbourhood history")}
+ ]
+},
+
+/* ---------- 5 ---------- */
+{
+ date:"17", mon:"NOV", dow:"Tue", city:"Seville", nav:"17 Tue",
+ title:"Alcázar, Cathedral, Plaza de España",
+ hotel:"Legado Magdalena Hotel, Seville",
+ move:"Walking, with the car parked",
+ flags:[
+  "Two no-dog tickets back to back this morning, so Poppy is in from about 09:30 to 15:30. That’s the longest stretch of the trip — leave the fan on and a chew."
+ ],
+ items:[
+  {poppy:"drop", t:"09:30", n:"Drop Poppy at the hotel", d:"In until 15:30. Water, chew, fan."},
+  {t:"10:00", n:"Royal Alcázar", q:"Real Alcazar Seville", d:"Allow 2 to 2.5 hours. Still a working royal palace — the upper floor is used by the Spanish royal family. The Mudéjar Palace of Pedro I is the showpiece: Christian king, Muslim craftsmen, Arabic inscriptions praising Allah carved for a Catholic court. Save the gardens for last and bring water.", tag:"booked", dog:"no"},
+  {t:"13:30", n:"Cathedral and the Giralda", q:"Seville Cathedral", d:"The largest Gothic cathedral in the world, built on the footprint of the mosque it replaced. The Giralda is the mosque’s minaret with a Renaissance belfry stacked on top — you walk up 34 ramps, not stairs, because the muezzin rode a horse up.", tag:"booked", dog:"no", chips:["SG$55.95"]},
+  {poppy:"collect", t:"15:30", n:"Collect Poppy", d:"Water and a proper rest before the afternoon."},
+  {t:"17:00", n:"Plaza de España", q:"Plaza de Espana Seville", d:"Built for the 1929 Ibero-American Exposition. Walk it in order: central fountain, cross a bridge, along the curve of 48 tiled alcoves — one per Spanish province, in alphabetical order — then look back across the canal.", dog:"with", tag:"free"},
+  {t:"17:45", n:"Parque de María Luisa loop", q:"Parque de Maria Luisa Seville", d:"Duck pond and the frog fountain. Shaded, flat, easy on Poppy.", dog:"with", tag:"free"},
+  {t:"18:15", n:"Torre del Oro and the riverside", q:"Torre del Oro Seville", d:"About 20 minutes’ walk back along the water. Thirteenth-century Almohad watchtower that once anchored a chain across the river. Sunset is around 18:10, so this is the afterglow.", dog:"with", tag:"free"}
+ ],
+ eat:[
+  {meal:"Lunch near the Cathedral", opts:[
+    {n:"Chicuelo Bodeguita & Tapas", q:"Chicuelo Bodeguita Tapas Seville", d:"4.7★ on about 5,000 reviews. The safe pick.", tag:"option"},
+    {n:"Bodeguita Manolete", q:"Bodeguita Manolete Seville", d:"Has a terrace. Save whichever one you skip for tomorrow.", tag:"option"},
+    {n:"Bodega Santa Cruz Las Columnas", q:"Bodega Santa Cruz Las Columnas Seville", d:"Cheap tapas, mostly standing, a few terrace tables. Fast if you’re tight for the 13:30 ticket.", tag:"option"}
+  ]},
+  {meal:"Dinner in Santa Cruz", opts:[
+    {n:"Bodeguita Manolete", q:"Bodeguita Manolete Seville", d:"Ask for a terrace table so Poppy can stay.", tag:"option"},
+    {n:"Chicuelo Bodeguita & Tapas", q:"Chicuelo Bodeguita Tapas Seville", d:"Backup.", tag:"option"}
+  ]}
+ ],
+ maps:["Real Alcazar, Seville","Seville Cathedral","Plaza de Espana, Seville","Parque de Maria Luisa, Seville","Torre del Oro, Seville"],
+ listen:[
+  {k:"web", l:"Rick Steves — Sevilla City Walk", u:"https://www.ricksteves.com/watch-read-listen/audio/audio-tours/spain-portugal-audio-tours"},
+  {k:"yt", l:"The Alcázar’s Mudéjar palace explained", u:yt("Real Alcazar Seville Mudejar palace Pedro I history")},
+  {k:"yt", l:"Why the Giralda has ramps, not stairs", u:yt("Giralda Seville minaret history")}
+ ]
+},
+
+/* ---------- 6 ---------- */
+{
+ date:"18", mon:"NOV", dow:"Wed", city:"Seville", nav:"18 Wed",
+ title:"Casa de Pilatos, then a slow Seville day",
+ hotel:"Legado Magdalena Hotel, Seville",
+ move:"All on foot",
+ flags:[
+  "Casa de Pilatos was marked “fully booked?!” in the spreadsheet. Confirm it before you build the morning around it — if it’s gone, the Santa Cruz walk can simply start earlier."
+ ],
+ items:[
+  {poppy:"drop", t:"09:40", n:"Drop Poppy at the hotel", d:"Short one — out again at 11:45."},
+  {t:"10:00", n:"Casa de Pilatos", q:"Casa de Pilatos Seville", d:"About 15 minutes’ walk. A 16th-century palace that mixes Mudéjar tilework, a Gothic vault and an Italian Renaissance courtyard, with a collection of Roman statues the owners brought back from Italy. Quieter than the Alcázar and, for some people, the better building.", tag:"book", dog:"no"},
+  {poppy:"collect", t:"11:45", n:"Collect Poppy", d:"She’s with you for the rest of the day."},
+  {t:"12:15", n:"Santa Cruz streets and coffee", q:"Barrio Santa Cruz Seville", d:"The old Jewish quarter, deliberately narrowed after 1492 so the lanes stayed shaded. Keep Poppy close — some passages are barely shoulder width.", dog:"with", tag:"free"},
+  {t:"15:00", n:"Back at the hotel", q:"Legado Magdalena Hotel Seville", d:"Rest and water. Long evening ahead."},
+  {t:"17:30", n:"Plaza del Triunfo and Calle Mateos Gago", q:"Plaza del Triunfo Seville", d:"The classic view back up Mateos Gago to the Giralda. Sunset is around 18:10 — be in place by 17:40.", dog:"with", tag:"free"},
+  {t:"18:10", n:"Terraza Fulton (optional)", q:"Terraza Fulton Seville", d:"Rooftop drink with the Cathedral in front of you. Ask about Poppy before you go up.", dog:"ask"},
+  {t:"18:40", n:"Walk to Plaza de la Encarnación", q:"Plaza de la Encarnacion Seville", d:"About 12 minutes. The Setas — a giant timber waffle over Roman ruins, finished 2011 and still argued about."},
+  {t:"19:00", n:"Las Setas light show", q:"Setas de Sevilla", d:"They light up after dark, so you get the show from your dinner table.", dog:"with", tag:"free"}
+ ],
+ eat:[
+  {meal:"Lunch", opts:[
+    {n:"Whichever you skipped yesterday", q:"Chicuelo Bodeguita Tapas Seville", d:"Chicuelo Bodeguita & Tapas or Bodeguita Manolete. Terrace, Poppy with you.", tag:"option"}
+  ]},
+  {meal:"Dinner on the plaza", opts:[
+    {n:"La Malvaloca", q:"La Malvaloca Seville", d:"On Plaza de la Encarnación, facing the Setas.", tag:"option"},
+    {n:"Doña Encarna", q:"Dona Encarna Seville", d:"Same square.", tag:"option"},
+    {n:"La Gorda de las Setas", q:"La Gorda de las Setas Seville", d:"Same square.", tag:"option"}
+  ]}
+ ],
+ maps:["Casa de Pilatos, Seville","Barrio Santa Cruz, Seville","Plaza del Triunfo, Seville","Setas de Sevilla","Plaza de la Encarnacion, Seville"],
+ listen:[
+  {k:"yt", l:"Casa de Pilatos — the palace people miss", u:yt("Casa de Pilatos Seville palace tour")},
+  {k:"yt", l:"Las Setas: Seville’s most divisive building", u:yt("Setas de Sevilla Metropol Parasol architecture")}
+ ]
+},
+
+/* ---------- 7 ---------- */
+{
+ date:"19", mon:"NOV", dow:"Thu", city:"Seville → Córdoba → Granada", nav:"19 Thu",
+ title:"Córdoba in five hours, then on to Granada",
+ hotel:"NH Collection Granada Victoria",
+ move:"Car, about 3.5 hours of driving split in two",
+ flags:[
+  "Everything in Córdoba today is from the outside. You are not going inside the Mezquita — the plan walks its walls. If seeing the forest of arches matters to you, you need a ticket and about 90 extra minutes, and Poppy can’t come in.",
+  "Hammam Al Ándalus at 21:00 needs booking ahead and you’ll have been on the road since 09:00. Decide now rather than at 20:00."
+ ],
+ items:[
+  {t:"09:00", n:"Leave Seville", q:"Legado Magdalena Hotel Seville", d:"About 1h45 to Córdoba."},
+  {t:"10:45", n:"Park at Campo Santo de los Mártires", q:"Parking Campo Santo de los Martires Cordoba", d:"The most convenient car park for the old town."},
+  {t:"10:50", n:"Alcázar walls and the Mezquita exterior", q:"Mezquita-Catedral de Cordoba", d:"Past the outside of the Alcázar de los Reyes Cristianos, then along the Mezquita’s walls to the Puerta del Perdón. The orange-tree courtyard is free to enter.", dog:"with", tag:"free"},
+  {t:"11:15", n:"Calleja de las Flores and the Judería", q:"Calleja de las Flores Cordoba", d:"The famous flowerpot alley frames the Mezquita’s bell tower at the end. Whitewashed lanes and small plazas all round it; the Maimonides statue is a short stroll away.", dog:"with", tag:"free"},
+  {t:"11:45", n:"San Basilio patios", q:"Calle San Basilio Cordoba", d:"Calle San Basilio and Calle Martín de Roa. Several patios open for a small donation, usually late morning. Ask at each door about Poppy and take turns if it’s a no.", dog:"turns"},
+  {t:"12:30", n:"Roman Bridge and Torre de la Calahorra", q:"Puente Romano Cordoba", d:"Cross on foot and look back at the Mezquita over the Guadalquivir. The Triumph of San Rafael column stands at the city end.", dog:"with", tag:"free"},
+  {t:"14:15", n:"Plaza del Potro and Plaza de la Corredera", q:"Plaza de la Corredera Cordoba", d:"Cervantes stayed at the inn on Plaza del Potro. La Corredera is the only Castilian-style arcaded square in Andalusia — flat, easy, terraces for coffee.", dog:"with", tag:"free"},
+  {t:"15:00", n:"Roman Temple and Plaza de las Tendillas", q:"Roman Temple Cordoba", d:"About 8 minutes from the Mezquita area, then walk back to the car.", dog:"with", tag:"free"},
+  {t:"15:45", n:"Drive to Granada", q:"Granada", d:"About 2 hours."},
+  {t:"18:00", n:"NH Collection Granada Victoria", q:"NH Collection Granada Victoria", d:"Check in and rest until 18:30. Ask about the free upgrade."},
+  {t:"21:00", n:"Hammam Al Ándalus (optional)", q:"Hammam Al Andalus Granada", d:"Arab baths in the old town. Needs booking ahead.", tag:"book"}
+ ],
+ eat:[
+  {meal:"Lunch in Córdoba, 13:00", opts:[
+    {n:"Casa Pepe de la Judería", q:"Casa Pepe de la Juderia Cordoba", d:"Calle Romero 1, two minutes from the Mezquita. Already booked.", tag:"booked"},
+    {n:"Bodegas Mezquita Ribera", q:"Bodegas Mezquita Ribera Cordoba", d:"4.8★ on 20,000+ reviews, near the river with outdoor seating. Half portions let you try salmorejo, aubergines with honey and oxtail croquetas.", tag:"option"},
+    {n:"La Esquinita de la Judería El Patio", q:"La Esquinita de la Juderia Cordoba", d:"4.7★, has a patio, opens at 13:00.", tag:"option"},
+    {n:"Taberna Ágora Mezquita", q:"Taberna Agora Mezquita Cordoba", d:"4.3★, courtyard seating.", tag:"option"}
+  ]},
+  {meal:"Dinner in Granada, 19:00", opts:[
+    {n:"Los Diamantes", q:"Los Diamantes Granada", d:"Granada institution for fried fish. Standing room, loud, fast. No bookings — go early or expect to wait.", tag:"walkin"}
+  ]}
+ ],
+ courts:[
+  ["Real Sociedad de Tenis de Granada","12 min from the hotel · €2 · book the night before","Real Sociedad de Tenis de Granada"]
+ ],
+ maps:["Parking Campo Santo de los Martires, Cordoba","Mezquita-Catedral de Cordoba","Calleja de las Flores, Cordoba","Calle San Basilio, Cordoba","Puente Romano, Cordoba","Plaza de la Corredera, Cordoba","Plaza de las Tendillas, Cordoba"],
+ listen:[
+  {k:"yt", l:"Rick Steves — Córdoba and the Mezquita", u:yt("Rick Steves Cordoba Spain Mezquita")},
+  {k:"yt", l:"How a mosque became a cathedral", u:yt("Mezquita Cordoba mosque cathedral history documentary")},
+  {k:"sp", l:"Something for the two-hour drive to Granada", u:sp("Paco de Lucia")}
+ ]
+},
+
+/* ---------- 8 ---------- */
+{
+ date:"20", mon:"NOV", dow:"Fri", city:"Granada", nav:"20 Fri",
+ title:"The Alhambra, then up into the Albaicín",
+ hotel:"NH Collection Granada Victoria",
+ move:"On foot, with steep cobbles in the evening",
+ flags:[
+  "The spreadsheet has sunset at 20:00. That’s a summer figure — in late November Granada goes dark around 18:10. As written you’d reach the Mirador de San Nicolás nearly two hours after dark. Flip the evening: Albaicín at 16:45, Mirador at 17:30, tapas afterwards at 18:30.",
+  "The Alhambra scans your ticket at the Nasrid Palaces at an exact half-hour slot. Miss it and it’s gone — be at the gate 30 minutes early."
+ ],
+ items:[
+  {t:"09:00", n:"Dog walk near the hotel", q:"NH Collection Granada Victoria", d:"Easy start.", dog:"with"},
+  {t:"09:30", n:"Carmen de los Mártires", q:"Carmen de los Martires Granada", d:"Free gardens below the Alhambra — peacocks, a lake, and views over the city. Confirm the dog policy at the gate.", dog:"ask", tag:"free"},
+  {t:"10:30", n:"Brunch", q:"", d:"See the options below."},
+  {t:"11:15", n:"Plaza Nueva and La Alcaicería", q:"Plaza Nueva Granada", d:"The Alcaicería is a reconstruction of the Moorish silk bazaar that burned down in 1843 — touristy, but the right shape. Cathedral from the outside only.", dog:"with", tag:"free"},
+  {poppy:"drop", t:"11:45", n:"Drop Poppy at the hotel", d:"Water and a chew. Leave by 12:00 — the Alhambra is a four-hour block."},
+  {t:"12:30", n:"Alhambra", q:"Alhambra Granada", d:"Entry at 12:30. Three things in one: the Nasrid Palaces, which are the reason you came and are timed to the minute; the Alcazaba fortress with the city view; and the Generalife summer gardens, uphill and usually last.", tag:"booked", dog:"no"},
+  {poppy:"collect", t:"16:00", n:"Collect Poppy", d:"She’s with you for the whole evening."},
+  {t:"16:45", n:"Carrera del Darro", q:"Carrera del Darro Granada", d:"The river path under the Alhambra walls, past two Moorish bridges and the 11th-century Bañuelo bathhouse. One of the loveliest streets in Spain.", dog:"with", tag:"free"},
+  {t:"17:10", n:"Up through the Albaicín", q:"Albaicin Granada", d:"The old Moorish quarter, whitewashed and almost vertical. Take breaks — the cobbles are steep and uneven.", dog:"with", tag:"free"},
+  {t:"17:30", n:"Mirador de San Nicolás", q:"Mirador de San Nicolas Granada", d:"The Alhambra with the Sierra Nevada behind it. Sunset is about 18:10 — get there by 17:40, it fills up and buskers claim the wall.", dog:"with", tag:"free"},
+  {t:"18:40", n:"Tapas", q:"", d:"Moved after the Mirador — see below."}
+ ],
+ eat:[
+  {meal:"Brunch", opts:[
+    {n:"El Huerto de San Antón", q:"El Huerto de San Anton Granada", d:"Garden setting, good for Poppy.", tag:"option"},
+    {n:"Café Baraka", q:"Cafe Baraka Granada", d:"Second option.", tag:"option"}
+  ]},
+  {meal:"Tapas", opts:[
+    {n:"Retro Can", q:"Retro Can Granada", d:"In Granada the tapa still comes free with the drink — order a second round and a different plate arrives.", tag:"option"},
+    {n:"Terraces around Campo del Príncipe", q:"Campo del Principe Granada", d:"Fallback if Retro Can is busy or closed. A whole square of terraces.", tag:"option"}
+  ]},
+  {meal:"Dinner, 21:15", opts:[
+    {n:"Stories Granada", q:"Stories Granada restaurant", d:"Dog-friendly, which is why it’s first choice.", tag:"option"},
+    {n:"La Cochera", q:"La Cochera Granada", d:"Backup.", tag:"option"},
+    {n:"Rue de la Crêpe", q:"Rue de la Crepe Granada", d:"Backup.", tag:"option"}
+  ]}
+ ],
+ maps:["Carmen de los Martires, Granada","Plaza Nueva, Granada","Alhambra, Granada","Carrera del Darro, Granada","Albaicin, Granada","Mirador de San Nicolas, Granada"],
+ listen:[
+  {k:"yt", l:"Rick Steves — Granada and the Alhambra", u:yt("Rick Steves Granada Alhambra Spain")},
+  {k:"yt", l:"The Alhambra: what to look for in the Nasrid Palaces", u:yt("Alhambra Nasrid Palaces explained guide")},
+  {k:"sp", l:"Lorca’s Granada — flamenco and cante jondo", u:sp("cante jondo")}
+ ]
+},
+
+/* ---------- 9 ---------- */
+{
+ date:"21", mon:"NOV", dow:"Sat", city:"Granada → Málaga", nav:"21 Sat",
+ title:"Coast day: market, court, beach sunset",
+ hotel:"NH Málaga",
+ move:"Car, about 1.5 hours",
+ flags:[
+  "Book the Málaga court by Wednesday — it needs three days’ notice.",
+  "Parasite treatment for Poppy has to happen between 2 and 7 days before export. Export is 28 Nov, so the window opens today and shuts on Thursday 26th."
+ ],
+ items:[
+  {t:"11:00", n:"Leave Granada", q:"NH Collection Granada Victoria", d:"About 1.5 hours down to the coast."},
+  {t:"13:00", n:"NH Málaga", q:"NH Malaga", d:"Drop bags, quick dog walk.", dog:"with"},
+  {poppy:"drop", t:"13:25", n:"Drop Poppy before the market", d:"Atarazanas is indoors and busy. She’s in until 17:15, through the tennis too."},
+  {t:"13:30", n:"Mercado de Atarazanas", q:"Mercado de Atarazanas Malaga", d:"Tapas lunch inside the market. The horseshoe arch at the entrance is the surviving gate of a 14th-century Nasrid shipyard — the sea used to come right up to it. Closes at 15:00, so be in by 14:30.", dog:"no"},
+  {t:"15:15", n:"Club de Tenis Málaga", q:"Club de Tenis Malaga", d:"About 15 minutes each way. €26, book three days ahead.", tag:"book", dog:"no"},
+  {poppy:"collect", t:"17:15", n:"Collect Poppy", d:"Everything from here is outdoors."},
+  {t:"17:30", n:"Muelle Uno and La Malagueta beach", q:"Muelle Uno Malaga", d:"The port promenade out to the beach. Sunset is around 18:10.", dog:"with", tag:"free"},
+  {t:"18:30", n:"Rest and feed Poppy", q:"NH Malaga", d:"An hour back at the hotel."},
+  {t:"19:30", n:"Calle Larios and the Cathedral", q:"Calle Larios Malaga", d:"The marble main street, lit up and busy on a Saturday. The cathedral is nicknamed La Manquita, the one-armed lady — the second tower was never finished.", dog:"with", tag:"free"}
+ ],
+ eat:[
+  {meal:"Lunch", opts:[
+    {n:"Mercado de Atarazanas tapas bars", q:"Mercado de Atarazanas Malaga", d:"Eat at the counters inside. Closes 15:00.", tag:"option"}
+  ]},
+  {meal:"Dinner, 20:30", opts:[
+    {n:"A dog-friendly terrace near the hotel", q:"dog friendly restaurants Malaga centro", d:"Nothing fixed. Plenty of terraces around Calle Larios and Plaza de la Merced.", tag:"option"}
+  ]}
+ ],
+ maps:["NH Malaga","Mercado de Atarazanas, Malaga","Club de Tenis Malaga","Muelle Uno, Malaga","Playa de la Malagueta, Malaga","Calle Larios, Malaga"],
+ listen:[
+  {k:"yt", l:"Málaga old town walking tour", u:yt("Malaga old town walking tour guide")},
+  {k:"sp", l:"For the drive down from Granada", u:sp("Spanish guitar road trip")}
+ ]
+},
+
+/* ---------- 10 ---------- */
+{
+ date:"22", mon:"NOV", dow:"Sun", city:"Málaga", nav:"22 Sun",
+ title:"Picasso, Romans, Moors — all in one hill",
+ hotel:"NH Málaga",
+ move:"On foot, with one climb",
+ flags:[
+  "Poppy goes in and out three times today. The middle break at 13:45 is short — if that feels like too much shuttling, consider dropping the Roman Theatre, which takes 20 minutes and is visible from the street anyway."
+ ],
+ items:[
+  {t:"09:00", n:"Brunch at Châi", q:"Chai Cafe Brunch Malaga", d:"Dog-friendly. Slow start to a Sunday.", dog:"with"},
+  {poppy:"drop", t:"10:15", n:"Drop Poppy at the hotel", d:"Water and a chew. Out again at 13:45."},
+  {t:"10:45", n:"Picasso Museum", q:"Museo Picasso Malaga", d:"Book online and arrive at opening. Housed in a 16th-century palace; the collection came from the artist’s own family, so it leans personal rather than greatest-hits.", tag:"book", dog:"no"},
+  {t:"12:15", n:"Casa Natal Picasso", q:"Casa Natal Picasso Malaga", d:"From the outside, on Plaza de la Merced. He was born here in 1881 and left at ten.", dog:"no", tag:"free"},
+  {poppy:"collect", t:"13:45", n:"Collect Poppy — short walk and water", d:"Thirty minutes, then back in."},
+  {poppy:"drop", t:"14:15", n:"Drop Poppy again", d:"For the Roman Theatre, Alcazaba and Gibralfaro. Out at 18:00."},
+  {t:"14:30", n:"Roman Theatre", q:"Teatro Romano Malaga", d:"First century BC, found by accident in 1951 under a cultural centre. Twenty minutes is enough.", dog:"no", tag:"free"},
+  {t:"15:00", n:"Alcazaba", q:"Alcazaba Malaga", d:"Free after 14:00 on Sundays, so expect a queue. An 11th-century Moorish palace-fortress built partly out of the Roman theatre below it — you can see reused columns in the arches.", dog:"no", tag:"free"},
+  {t:"16:20", n:"Castillo de Gibralfaro", q:"Castillo de Gibralfaro Malaga", d:"Uphill from the Alcazaba along the connecting rampart. Enter by 17:15 — it closes at 18:00. The view over the bullring and the port is the payoff.", dog:"no"},
+  {poppy:"collect", t:"18:00", n:"Collect Poppy", d:"She’s with you for the evening."},
+  {t:"18:15", n:"Calle Larios and the Cathedral", q:"Calle Larios Malaga", d:"Sunday evening paseo.", dog:"with", tag:"free"}
+ ],
+ eat:[
+  {meal:"Brunch", opts:[
+    {n:"Châi, Café & Brunch", q:"Chai Cafe Brunch Malaga", d:"Dog-friendly.", tag:"option"}
+  ]},
+  {meal:"Lunch near Plaza de la Merced", opts:[
+    {n:"Anywhere on Plaza de la Merced", q:"restaurants Plaza de la Merced Malaga", d:"Poppy is at the hotel for this one, so no constraint.", tag:"option"}
+  ]},
+  {meal:"Farewell dinner, 19:00+", opts:[
+    {n:"Espetos at Pedregalejo", q:"espetos Pedregalejo Malaga", d:"Sardines skewered on a cane and grilled over a wood fire in a sand-filled boat on the beach. The old fishing quarter, about 10 minutes by taxi. Outdoor tables, so Poppy comes.", tag:"option"}
+  ]}
+ ],
+ maps:["Museo Picasso Malaga","Casa Natal Picasso, Malaga","Teatro Romano, Malaga","Alcazaba, Malaga","Castillo de Gibralfaro, Malaga","Calle Larios, Malaga","Pedregalejo, Malaga"],
+ listen:[
+  {k:"yt", l:"Picasso’s Málaga childhood", u:yt("Picasso Malaga early life documentary")},
+  {k:"yt", l:"Alcazaba and Gibralfaro explained", u:yt("Alcazaba Malaga Gibralfaro history")}
+ ]
+},
+
+/* ---------- 11 ---------- */
+{
+ date:"23", mon:"NOV", dow:"Mon", city:"Ronda day trip", nav:"23 Mon",
+ title:"The bridge over the gorge",
+ hotel:"NH Málaga",
+ move:"Car, about 1.5 hours each way",
+ flags:[
+  "The best-rated restaurants in Ronda fill up. Book Kütral or Tragatá now and say Poppy is coming."
+ ],
+ items:[
+  {t:"08:00", n:"Poppy’s walk, then leave", q:"NH Malaga", d:"Take water and a bowl. Stop around 09:15 for a leg stretch.", dog:"with"},
+  {t:"10:00", n:"Park near Plaza de Toros", q:"Parking Plaza de Toros Ronda", d:"The Mercadillo side is the easiest parking. Short walk for Poppy on arrival.", dog:"with"},
+  {t:"10:15", n:"Alameda del Tajo", q:"Alameda del Tajo Ronda", d:"Cliff-edge park with the Paseo Blas Infante running along the drop. Reviewers call it dog-friendly.", dog:"with", tag:"free"},
+  {t:"11:00", n:"Plaza de Toros", q:"Plaza de Toros Ronda", d:"One of the oldest bullrings in Spain, 1785, and the birthplace of modern bullfighting on foot. Open to the public every day. Dog policy unconfirmed, so take turns — one goes in, the other waits at the Alameda, then swap.", dog:"turns"},
+  {t:"12:15", n:"Puente Nuevo", q:"Puente Nuevo Ronda", d:"The 98-metre bridge across the El Tajo gorge, finished in 1793 after 34 years. Cross on foot to Plaza de España, then the Mirador de Aldehuela and the viewpoint at Plaza María Auxiliadora.", dog:"with", tag:"free"},
+  {t:"15:00", n:"Arco del Cristo photo walk", q:"Arco del Cristo Ronda", d:"Cross the bridge, turn right on Calle Tenorio and take the steep cobbled path down. The best view of the Puente Nuevo and the gorge is from the bottom, and the afternoon sun is on it. Steep — allow time for the climb back.", dog:"with", tag:"free"},
+  {t:"16:15", n:"Coffee and a last look", q:"Plaza del Socorro Ronda", d:"Then back to the car."},
+  {t:"16:30", n:"Drive back to Málaga", q:"NH Malaga", d:"Arrive about 18:15. Walk Poppy, then dinner."}
+ ],
+ eat:[
+  {meal:"Lunch in Ronda, 13:30", opts:[
+    {n:"Kütral", q:"Kutral Ronda", d:"Argentinian steak house, on a Repsol list of dog-friendly spots. Book ahead and mention Poppy.", tag:"book"},
+    {n:"Tragatá", q:"Tragata Ronda", d:"Michelin-starred, also on the dog-friendly list. Book ahead.", tag:"book"},
+    {n:"Plaza del Socorro terraces", q:"Plaza del Socorro Ronda", d:"Backup — a whole square of bars with outdoor tables, no booking needed.", tag:"option"}
+  ]},
+  {meal:"Dinner in Málaga", opts:[
+    {n:"Near the hotel", q:"restaurants near NH Malaga", d:"You’ll be back around 18:30 and tired. Keep it close.", tag:"option"}
+  ]}
+ ],
+ maps:["Parking Plaza de Toros, Ronda","Alameda del Tajo, Ronda","Plaza de Toros, Ronda","Puente Nuevo, Ronda","Plaza Maria Auxiliadora, Ronda","Arco del Cristo, Ronda","Plaza del Socorro, Ronda"],
+ listen:[
+  {k:"yt", l:"Ronda and the Puente Nuevo", u:yt("Ronda Spain Puente Nuevo gorge history")},
+  {k:"yt", l:"Why Hemingway and Orson Welles loved Ronda", u:yt("Hemingway Orson Welles Ronda Spain")},
+  {k:"sp", l:"Three hours of driving to fill", u:sp("Andalucia road trip")}
+ ]
+},
+
+/* ---------- 12 ---------- */
+{
+ date:"24", mon:"NOV", dow:"Tue", city:"Málaga → Madrid", nav:"24 Tue",
+ title:"Train north, then the paperwork begins",
+ hotel:"Hard Rock Hotel Madrid",
+ move:"Avlo 10:35 → Atocha 13:45 · Rental #2 back · Rental #3 out",
+ flags:[
+  "The spreadsheet has three different versions of this day stacked on top of each other — Retiro in the afternoon, a vet visit plus the Prado, and a MAPA/SVIF endorsement plus Toledo. Pick one before you travel. Given Poppy’s certificate must be issued within 10 days of 28 Nov, the vet is the only item that genuinely can’t move.",
+  "Rental #3 is an ECO car requirement for Madrid’s low-emission zone. Confirm at the Atocha desk."
+ ],
+ items:[
+  {t:"09:30", n:"Drop Rental #2 at María Zambrano", q:"Malaga Maria Zambrano station", d:"Seven days and four cities done. Fuel up and photograph the car first."},
+  {t:"10:35", n:"Avlo to Madrid", q:"Madrid Atocha station", d:"Arrives Atocha 13:45. Tickets booked, SG$145, SJ paid.", tag:"booked", chips:["TRAIN"]},
+  {t:"14:00", n:"Pick up Rental #3 at Atocha", q:"Car rental Madrid Atocha", d:"Yours until Saturday morning. Ask again about the ECO label."},
+  {t:"14:45", n:"Hard Rock Hotel Madrid", q:"Hard Rock Hotel Madrid", d:"Check in, Poppy out, bags down.", dog:"with"},
+  {t:"16:00", n:"El Retiro", q:"Parque del Retiro Madrid", d:"Easy first Madrid afternoon. The Palacio de Cristal is boarded up until 2027, so aim for the lake and the Paseo de la Argentina instead.", dog:"with", tag:"free"},
+  {t:"—", n:"Vet appointment (unscheduled)", q:"veterinary clinic Madrid", d:"The Others sheet puts the Madrid vet visit on Wed 25th, but this row also mentions it. Whichever day you choose, it must be a CEXGAN-registered vet and within 10 days of departure. Call ahead and ask: are you registered on CEXGAN, and do you do Singapore exports?", tag:"book", chips:["CRITICAL"]}
+ ],
+ eat:[
+  {meal:"Dinner", opts:[
+    {n:"Open", q:"restaurants near Hard Rock Hotel Madrid", d:"Nothing planned. First night, keep it near the hotel.", tag:"option"}
+  ]}
+ ],
+ courts:[
+  ["Real Madrid match","Check the club website — if there’s a home fixture this week it has to be booked now","Santiago Bernabeu Stadium Madrid"]
+ ],
+ maps:["Malaga Maria Zambrano station","Madrid Atocha station","Hard Rock Hotel Madrid","Parque del Retiro, Madrid"],
+ listen:[
+  {k:"web", l:"Rick Steves — Madrid City Walk (free audio tour, 1h26)", u:"https://www.ricksteves.com/watch-read-listen/audio/audio-tours/spain-portugal-audio-tours"},
+  {k:"yt", l:"Madrid in a day — orientation", u:yt("Madrid city guide first time visit")},
+  {k:"sp", l:"For the three-hour train", u:sp("Spanish indie madrid")}
+ ]
+},
+
+/* ---------- 13 ---------- */
+{
+ date:"25", mon:"NOV", dow:"Wed", city:"Madrid · Day 1", nav:"25 Wed",
+ title:"Prado, Retiro, Salamanca shopping, Letras nightcaps",
+ hotel:"Hard Rock Hotel Madrid",
+ move:"Walking and metro",
+ flags:[
+  "Two dinners are booked tonight — Chez Pepito at 20:00 in Chamberí and Casa Alberto at 20:45 on Huertas. They’re 25 minutes apart. Cancel one. Casa Alberto keeps the whole evening in Barrio de las Letras and sets up the bar crawl.",
+  "The Others sheet puts the vet visit and CEXGAN submission on this morning, which collides with the Prado at 10:00. Something has to give — and it isn’t the vet.",
+  "Sunset is about 17:50, so the Círculo rooftop at 18:45 is after dark. Still worth it for the lit Gran Vía view, just don’t expect the sunset."
+ ],
+ items:[
+  {t:"09:15", n:"Breakfast by the Prado", q:"Alma Nomad Bakery Madrid", d:"Alma Nomad or Murillo Café, Calle Ruiz de Alarcón 27, right by the museum.", dog:"with"},
+  {poppy:"drop", t:"09:45", n:"Drop Poppy at the hotel", d:"In until 12:45 for the Prado."},
+  {t:"10:00", n:"Museo del Prado", q:"Museo del Prado Madrid", d:"Timed entry is required. Don’t try to see it all — go for Velázquez’s Las Meninas, Goya’s Black Paintings in the basement, and Bosch’s Garden of Earthly Delights.", tag:"booked", dog:"no", chips:["KLOOK"]},
+  {poppy:"collect", t:"12:45", n:"Collect Poppy for El Retiro", d:"She’s with you through lunch."},
+  {t:"13:00", n:"El Retiro", q:"Parque del Retiro Madrid", d:"The Palacio de Cristal is boarded up until 2027. The rowing lake and the Velázquez Palace are the alternatives.", dog:"with", tag:"free"},
+  {t:"14:00", n:"Lunch at Casa Dani", q:"Casa Dani Mercado de la Paz Madrid", d:"See below.", dog:"ask"},
+  {t:"15:30", n:"Flabelus", q:"Flabelus Serrano 82 Madrid", d:"Serrano 82. Spanish-made slippers-as-shoes.", dog:"ask"},
+  {t:"16:00", n:"Hoff flagship", q:"Hoff Calle Velazquez 37 Madrid", d:"Calle Velázquez 37.", dog:"ask"},
+  {t:"16:30", n:"Gucci", q:"Gucci Serrano 49 Madrid", d:"Serrano 49."},
+  {t:"17:00", n:"Chanel, then Dior and Fendi", q:"Chanel Jose Ortega y Gasset Madrid", d:"Chanel at Ortega y Gasset 16, then Dior and Fendi together at number 6."},
+  {t:"17:30", n:"Loewe", q:"Loewe Serrano 34 Madrid", d:"Serrano 34. Spanish, founded 1846, and the leather is the point."},
+  {t:"17:50", n:"Zara, Serrano 23", q:"Zara Serrano 23 Madrid", d:"Quick pass, or skip it — you hit Zara twice more on Friday."},
+  {t:"18:10", n:"Círculo de Bellas Artes rooftop", q:"Circulo de Bellas Artes Madrid", d:"About €5 for the lift. Looks straight down Gran Vía at the Metrópolis building. After dark at this time of year, which is its own kind of good.", tag:"free", dog:"no"},
+  {t:"22:15", n:"Los Gabrieles", q:"Los Gabrieles Calle Echegaray 17 Madrid", d:"Echegaray 17, two minutes from dinner. Shut for 21 years, reopened April 2026 — 300 square metres of Andalusian tilework, the so-called Sistine Chapel of azulejos. Closes 01:00 on a Wednesday.", dog:"ask"},
+  {t:"22:45", n:"Viva Madrid", q:"Viva Madrid Calle Manuel Fernandez y Gonzalez 7 Madrid", d:"Round the corner on Manuel Fernández y González 7. Hand-painted tiles, carved ceiling, same group as Salmon Guru. One drink.", dog:"ask"},
+  {t:"23:15", n:"Salmon Guru", q:"Salmon Guru Calle Echegaray 21 Madrid", d:"Echegaray 21. Walk-ins only, no reservations, open to 02:00. A Wednesday means little or no queue — on a Friday there’d be one down the street.", tag:"walkin", dog:"no"}
+ ],
+ eat:[
+  {meal:"Lunch, 14:00", opts:[
+    {n:"Casa Dani", q:"Casa Dani Mercado de la Paz Madrid", d:"Mercado de la Paz, Calle Ayala 28. Order the tortilla de patata and the croquetas. Weekday only — one listing shows it closed Sundays and short on Saturdays.", tag:"option"}
+  ]},
+  {meal:"Dinner — pick ONE", opts:[
+    {n:"Casa Alberto, 20:45", q:"Casa Alberto Calle de las Huertas 18 Madrid", d:"Huertas 18, +34 91 429 93 56. Rabo de toro, callos, house vermouth. Keeps you two minutes from the bars. This is the one to keep.", tag:"booked"},
+    {n:"Chez Pepito, 20:00", q:"Chez Pepito Cardenal Cisneros Madrid", d:"Cardenal Cisneros, up in Chamberí. Twenty-five minutes from Casa Alberto and from the Letras bars. Cancel this one.", tag:"booked"}
+  ]}
+ ],
+ courts:[
+  ["SPC Puente de Praga","7 days ahead · €9 · 10 min away","SPC Puente de Praga Madrid"],
+  ["FTM Fuencarral","3 days ahead · €11 · 20 min away","FTM Fuencarral Madrid"],
+  ["BamVolea Ciudad de la Raqueta","7 days ahead · €20 · 20 min away","Ciudad de la Raqueta Madrid"]
+ ],
+ maps:["Museo del Prado, Madrid","Parque del Retiro, Madrid","Mercado de la Paz, Madrid","Calle Serrano 49, Madrid","Calle Jose Ortega y Gasset 6, Madrid","Loewe Serrano 34, Madrid","Circulo de Bellas Artes, Madrid","Casa Alberto Huertas 18, Madrid","Los Gabrieles Echegaray 17, Madrid","Salmon Guru Echegaray 21, Madrid"],
+ listen:[
+  {k:"web", l:"Rick Steves — Madrid City Walk", u:"https://www.ricksteves.com/watch-read-listen/audio/audio-tours/spain-portugal-audio-tours"},
+  {k:"yt", l:"Las Meninas explained before you stand in front of it", u:yt("Las Meninas Velazquez explained analysis")},
+  {k:"yt", l:"Goya’s Black Paintings", u:yt("Goya Black Paintings Prado explained")}
+ ]
+},
+
+/* ---------- 14 ---------- */
+{
+ date:"26", mon:"NOV", dow:"Thu", city:"Madrid · Day 2", nav:"26 Thu",
+ title:"Churros, old Madrid, gifts, Santa Ana",
+ hotel:"Hard Rock Hotel Madrid",
+ move:"Walking",
+ flags:[
+  "The Others sheet marks this morning as the SVIF/PIF endorsement appointment, and notes Poppy may need to come for inspection. That lands on top of the 10:00 tennis. The endorsement is the last piece of paperwork before the flight — give it the morning and move tennis.",
+  "Book Botín now if you haven’t. It claims to be the oldest restaurant in the world still operating and it fills weeks out."
+ ],
+ items:[
+  {t:"09:00", n:"Chocolatería San Ginés", q:"Chocolateria San Gines Madrid", d:"Pasadizo de San Ginés 5. Open since 1894 and basically never closed since. Churros into thick drinking chocolate — the chocolate is a dipping sauce, not a drink.", dog:"no"},
+  {t:"10:00", n:"Tennis via Playtomic", q:"tennis courts Madrid centro", d:"No central court confirmed. Search Playtomic near the hotel. Club Alameda takes non-member bookings — check where it actually is and whether rackets can be hired.", tag:"book"},
+  {t:"12:15", n:"Nun cookies at Las Carboneras", q:"Convento del Corpus Christi Las Carboneras Madrid", d:"Plaza Conde de Miranda 3. Cloistered nuns sell biscuits through a revolving wooden drum so you never see each other. Ring the bell, say what you want, put the money on the drum. Closed Sundays.", dog:"no"},
+  {t:"12:45", n:"Plaza Mayor", q:"Plaza Mayor Madrid", d:"Photos only. Built 1619, burned down three times. Note the Casa de la Panadería frescoes on the north side — they’re from 1992, not the 17th century.", dog:"with", tag:"free"},
+  {t:"15:30", n:"Mercado de San Miguel", q:"Mercado de San Miguel Madrid", d:"Two minutes from Botín, so do it straight after lunch. Stroll only — you’ll be full of suckling pig. The 1916 iron-and-glass structure is the reason to look up.", dog:"no", tag:"free"},
+  {t:"16:00", n:"La Tienda de los Deseos", q:"La Tienda de los Deseos Madrid", d:"Address unconfirmed — check Maps before you set off."},
+  {t:"16:30", n:"Real Fábrica", q:"Real Fabrica Calle Cervantes 9 Madrid", d:"Calle Cervantes 9."},
+  {t:"17:00", n:"Postal y Tinta", q:"Postal y Tinta Calle Jesus 6 Madrid", d:"Calle Jesús 6. One listing says Alameda 8 — check before walking."},
+  {t:"17:45", n:"The Roof", q:"ME Madrid Reina Victoria Plaza de Santa Ana", d:"ME Madrid Reina Victoria, Plaza de Santa Ana. Sunset is about 17:50.", dog:"no"},
+  {t:"18:30", n:"Cervecería Alemana", q:"Cerveceria Alemana Plaza de Santa Ana 6 Madrid", d:"Plaza de Santa Ana 6, straight down from The Roof. Opened 1904 by German businessmen, barely changed since, and Hemingway’s corner table is still pointed out. A caña and gambas al ajillo. Open to midnight on a Thursday.", tag:"walkin", dog:"ask"},
+  {t:"19:15", n:"La Casa del Abuelo", q:"La Casa del Abuelo Calle Victoria 12 Madrid", d:"Calle Victoria 12, three minutes away. Garlic prawns and sweet red wine, since 1906. Standing room, walk in.", tag:"walkin", dog:"no"}
+ ],
+ eat:[
+  {meal:"Lunch, 13:30", opts:[
+    {n:"Sobrino de Botín", q:"Sobrino de Botin Cuchilleros 17 Madrid", d:"Cuchilleros 17. Book at botin.es or +34 913 664 217. Order the cochinillo asado to share — it comes from the original 1725 wood oven, which has never been allowed to go out. Allow two hours.", tag:"book"}
+  ]},
+  {meal:"Dinner, 21:15", opts:[
+    {n:"Lamiak", q:"Lamiak Cava Baja 42 Madrid", d:"Cava Baja 42, in La Latina. Basque pintxos. No reservations — turn up and wait at the bar.", tag:"walkin"}
+  ]}
+ ],
+ maps:["Chocolateria San Gines, Madrid","Convento de las Carboneras, Madrid","Plaza Mayor, Madrid","Sobrino de Botin, Madrid","Mercado de San Miguel, Madrid","Real Fabrica Calle Cervantes 9, Madrid","Plaza de Santa Ana, Madrid","La Casa del Abuelo Calle Victoria 12, Madrid","Lamiak Cava Baja 42, Madrid"],
+ listen:[
+  {k:"yt", l:"Botín — the oldest restaurant in the world", u:yt("Botin Madrid oldest restaurant world history")},
+  {k:"yt", l:"Madrid’s Habsburg quarter walking tour", u:yt("Madrid de los Austrias walking tour")},
+  {k:"sp", l:"Chotis and classic Madrid", u:sp("chotis madrid")}
+ ]
+},
+
+/* ---------- 15 ---------- */
+{
+ date:"27", mon:"NOV", dow:"Fri", city:"Madrid · Day 3", nav:"27 Fri",
+ title:"Malasaña gifts, Gran Vía, Debod sunset",
+ hotel:"Hard Rock Hotel Madrid",
+ move:"Walking, heading west all day",
+ flags:[
+  "The Others sheet keeps this as a buffer day in case the endorsement hits a problem. If Thursday went smoothly it’s yours; if not, the shopping is what gets cut.",
+  "Sunset is about 17:50, so be at Debod by 17:30, not 18:15. That one time change is the difference between the classic shot and a dark park.",
+  "Last chance to do anything about Poppy’s paperwork before the weekend — government offices shut."
+ ],
+ items:[
+  {t:"10:00", n:"HanSo Café", q:"HanSo Cafe Corredera Baja de San Pablo 51 Madrid", d:"Corredera Baja de San Pablo 51. Start of the Malasaña run.", dog:"ask"},
+  {t:"11:00", n:"Nest Boutique", q:"Nest Boutique Plaza de San Ildefonso Madrid", d:"Plaza de San Ildefonso 3. Hours unconfirmed."},
+  {t:"11:30", n:"La Postalera and El Moderno", q:"La Postalera Corredera Baja de San Pablo 15 Madrid", d:"Numbers 15 and 19 on the same street."},
+  {t:"12:15", n:"La Antigua", q:"La Antigua Corredera Baja de San Pablo 45 Madrid", d:"Number 45. Mon–Sat 11:00–21:00."},
+  {t:"12:45", n:"Hoff", q:"Hoff Fuencarral 11 Madrid", d:"Fuencarral 11."},
+  {t:"13:15", n:"Walk or taxi to Gabino", q:"Las Tortillas de Gabino Madrid", d:"North to Chamberí, about 20 minutes on foot."},
+  {t:"15:00", n:"Gran Vía run, heading west", q:"Gran Via Madrid", d:"Bershka (25), Stradivarius (30), Pull&Bear (31), Primark (32), Zara (34), Springfield (40), Torrons Vicens (47). Lefties’ address is unverified — check Maps."},
+  {t:"16:30", n:"Chocolatería Valor", q:"Chocolateria Valor Postigo de San Martin 7 Madrid", d:"Postigo de San Martín 7, two minutes behind Callao. Thicker, sweeter chocolate than San Ginés and darker, crunchier churros — a comparison rather than a repeat. Open to 22:30 on weekdays. The natural sit-down break in three hours of shopping.", dog:"no"},
+  {t:"17:00", n:"Zara flagship, Plaza de España", q:"Zara Plaza de Espana Madrid", d:"The big one."},
+  {t:"17:30", n:"Templo de Debod", q:"Templo de Debod Madrid", d:"Be in place by 17:30 — sunset is about 17:50. A real 2nd-century BC Egyptian temple, given to Spain in 1968 for helping save the monuments threatened by the Aswan Dam. Reflected in its own pool with the sun going down behind it.", dog:"with", tag:"free"},
+  {t:"18:15", n:"Riu Plaza España rooftop", q:"Hotel Riu Plaza Espana Madrid", d:"About €10 after 18:00, €5 before. The glass walkway over the edge is the gimmick.", dog:"no"},
+  {t:"19:00", n:"99 Cheesecake", q:"99 Sushi Bar 99 Cheesecake Calle Princesa 60 Madrid", d:"Calle Princesa 60, five minutes from Riu. Drop this if Valor filled you up.", dog:"ask"}
+ ],
+ eat:[
+  {meal:"Lunch, 13:30", opts:[
+    {n:"Las Tortillas de Gabino", q:"Las Tortillas de Gabino Calle Rafael Calvo 20 Madrid", d:"Calle de Rafael Calvo 20, +34 913 19 75 05. Order the Velazqueña (classic potato), the truffle tortilla, or the octopus or prawn versions. Skip the one stewed with callos. About €35 a head.", tag:"book"}
+  ]},
+  {meal:"Dinner, 21:00", opts:[
+    {n:"Sala de Despiece", q:"Sala de Despiece Madrid", d:"Counter-only, laid out like a butcher’s cutting room. Book it — it’s small and it’s a Friday.", tag:"book"}
+  ]}
+ ],
+ maps:["HanSo Cafe, Madrid","Corredera Baja de San Pablo 45, Madrid","Hoff Fuencarral 11, Madrid","Las Tortillas de Gabino, Madrid","Gran Via 32, Madrid","Chocolateria Valor Postigo de San Martin 7, Madrid","Plaza de Espana, Madrid","Templo de Debod, Madrid","Sala de Despiece, Madrid"],
+ listen:[
+  {k:"yt", l:"Why there’s an Egyptian temple in Madrid", u:yt("Templo de Debod Madrid Egyptian temple history")},
+  {k:"yt", l:"Gran Vía: Madrid’s Broadway", u:yt("Gran Via Madrid history architecture")}
+ ]
+},
+
+/* ---------- 16 ---------- */
+{
+ date:"28", mon:"NOV", dow:"Sat", city:"Madrid → Singapore", nav:"28 Sat",
+ title:"Home",
+ hotel:"—",
+ move:"Rental #3 back at MAD · SQ direct 16:55",
+ flags:[
+  "Be at the airport by 13:30, three hours before. Poppy’s paperwork gets checked at the airline desk, not at the gate — have the endorsed certificate, the vaccination records, the microchip record and the airline’s cabin form all in one folder.",
+  "Her border-control inspection in Singapore must have been booked at least 5 days before arrival, and the GST exemption permit before you land."
+ ],
+ items:[
+  {t:"11:00", n:"Pack", q:"Hard Rock Hotel Madrid", d:"Carrier out, folder of documents on top of the bag."},
+  {t:"13:00", n:"Leave the hotel", q:"Hard Rock Hotel Madrid", d:"Drop Rental #3 at Madrid-Barajas on the way."},
+  {t:"13:30", n:"Madrid-Barajas", q:"Madrid Barajas Airport", d:"Three hours before departure. Pet channel and document check take time."},
+  {t:"16:55", n:"MAD → SIN", q:"Madrid Barajas Airport", d:"Singapore Airlines, direct.", chips:["FLIGHT"]}
+ ],
+ eat:[],
+ maps:["Hard Rock Hotel Madrid","Car rental return Madrid Barajas Airport","Madrid Barajas Airport Terminal 1"],
+ listen:[]
+}
+
+];
+</script>
+<script>
+/* ============================= RENDER ============================= */
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function chipsFor(it){
+  let h = "";
+  if (it.tag && TAG[it.tag]) h += `<span class="chip ${TAG[it.tag][0]}">${TAG[it.tag][1]}</span>`;
+  if (it.dog && DOG[it.dog])  h += `<span class="chip ${DOG[it.dog][0]}">${DOG[it.dog][1]}</span>`;
+  (it.chips||[]).forEach(c => h += `<span class="chip plain">${esc(c)}</span>`);
+  return h ? `<div class="chips">${h}</div>` : "";
+}
+
+function itemHTML(it){
+  if (it.poppy){
+    const verb = it.poppy === "drop" ? "Drop off" : "Pick up";
+    return `<div class="poppy" data-kind="poppy">
+      <div class="pt">${esc(it.t||"")}</div>
+      <div class="pb">🐕 ${esc(it.n)}<small>${verb} — ${esc(it.d||"")}</small></div>
+    </div>`;
+  }
+  const title = it.q
+    ? `<a href="${pin(it.q)}" target="_blank" rel="noopener">${esc(it.n)}</a>`
+    : esc(it.n);
+  const kind = it.tag === "book" || it.tag === "booked" ? "book" : "item";
+  return `<div class="row" data-kind="${kind}">
+    <div class="time${it.t==="—"?" empty":""}">${esc(it.t||"")}</div>
+    <div class="body">
+      <div class="name">${title}</div>
+      ${it.d ? `<div class="desc">${esc(it.d)}</div>` : ""}
+      ${chipsFor(it)}
+    </div>
+  </div>`;
+}
+
+function eatHTML(e){
+  const opts = e.opts.map(o => {
+    const t = TAG[o.tag] || TAG.option;
+    return `<div class="opt ${o.tag==='booked'?'is-booked':''}">
+      <div class="on"><a href="${pin(o.q)}" target="_blank" rel="noopener">${esc(o.n)}</a>
+        <span class="chip ${t[0]}" style="margin-left:6px">${t[1]}</span></div>
+      <div class="od">${esc(o.d)}</div>
+    </div>`;
+  }).join("");
+  return `<div class="eat" data-kind="food">
+    <div class="eh"><span>${esc(e.meal)}</span><span>${e.opts.length>1?e.opts.length+" options":"fixed"}</span></div>
+    ${opts}</div>`;
+}
+
+function courtsHTML(cs){
+  return `<div class="eat" data-kind="book">
+    <div class="eh"><span>Court options — book ahead</span><span>${cs.length}</span></div>
+    ${cs.map(c=>`<div class="opt"><div class="on"><a href="${pin(c[2])}" target="_blank" rel="noopener">${esc(c[0])}</a>
+      <span class="chip book" style="margin-left:6px">TO BOOK</span></div>
+      <div class="od">${esc(c[1])}</div></div>`).join("")}
+  </div>`;
+}
+
+function dayHTML(d, i){
+  const id = "d" + d.date;
+  const flags = (d.flags||[]).map(f=>`<div class="alert" data-kind="item"><b>Check this.</b> ${esc(f)}</div>`).join("");
+  const body = (d.items||[]).map(itemHTML).join("");
+  const eats = (d.eat||[]).map(eatHTML).join("");
+  const courts = d.courts ? courtsHTML(d.courts) : "";
+  const listen = (d.listen||[]).length ? `
+    <details class="prep" data-kind="item"><summary>Listen before you go</summary><div class="pc"><div class="linklist">
+      ${d.listen.map(l=>`<a href="${l.u}" target="_blank" rel="noopener"><span class="k ${l.k}">${l.k==='yt'?'VIDEO':l.k==='sp'?'AUDIO':'GUIDE'}</span><span>${esc(l.l)}</span></a>`).join("")}
+    </div></div></details>` : "";
+  const mapbtn = (d.maps||[]).length ? `<a class="btn primary" href="${route(d.maps)}" target="_blank" rel="noopener">Walk this day in Maps</a>` : "";
+
+  return `<section class="day" id="${id}">
+    <div class="dayhead">
+      <div class="datebox"><span class="d">${d.date}</span><span class="m">${d.mon} · ${d.dow.toUpperCase()}</span></div>
+      <div class="ttl">
+        <div class="city">${esc(d.city)}</div>
+        <h2>${esc(d.title)}</h2>
+        <div class="daymeta"><span><b>Stay</b> ${esc(d.hotel)}</span><span><b>Move</b> ${esc(d.move)}</span></div>
+      </div>
+    </div>
+    ${flags}
+    <div class="tl">${body}</div>
+    ${eats}
+    ${courts}
+    <div class="btns">${mapbtn}</div>
+    ${listen}
+  </section>`;
+}
+
+document.getElementById("days").innerHTML = DAYS.map(dayHTML).join("");
+document.getElementById("nav").innerHTML =
+  DAYS.map(d=>`<a href="#d${d.date}">${esc(d.nav)}</a>`).join("");
+
+/* ---------- filters ---------- */
+const fbtns = [...document.querySelectorAll("#filters button")];
+fbtns.forEach(b => b.addEventListener("click", () => {
+  fbtns.forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  const f = b.dataset.f;
+  document.querySelectorAll("[data-kind]").forEach(el => {
+    const k = el.dataset.kind;
+    const show = f === "all" || (f === "book" && k === "book")
+      || (f === "poppy" && k === "poppy") || (f === "food" && k === "food");
+    el.classList.toggle("hidden", !show);
+  });
+  document.querySelectorAll(".day").forEach(day => {
+    const any = [...day.querySelectorAll("[data-kind]")].some(el => !el.classList.contains("hidden"));
+    day.classList.toggle("hidden", f !== "all" && !any);
+  });
+  document.querySelectorAll(".btns").forEach(el => el.classList.toggle("hidden", f !== "all"));
+}));
+
+/* ---------- nav highlight ---------- */
+const obs = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if (!e.isIntersecting) return;
+    document.querySelectorAll("#nav a").forEach(a => a.classList.remove("now"));
+    const a = document.querySelector('#nav a[href="#' + e.target.id + '"]');
+    if (a) { a.classList.add("now"); a.scrollIntoView({block:"nearest", inline:"center"}); }
+  });
+}, {rootMargin:"-130px 0px -70% 0px"});
+document.querySelectorAll(".day").forEach(d => obs.observe(d));
+
+/* ---------- theme ---------- */
+const tb = document.getElementById("themebtn");
+function applyTheme(t){
+  if (t) document.documentElement.setAttribute("data-theme", t);
+  else document.documentElement.removeAttribute("data-theme");
+  const dark = t === "dark" || (!t && matchMedia("(prefers-color-scheme: dark)").matches);
+  tb.textContent = dark ? "Light" : "Dark";
+}
+let saved = null;
+try { saved = localStorage.getItem("spain-theme"); } catch(e){}
+applyTheme(saved);
+tb.addEventListener("click", () => {
+  const dark = document.documentElement.getAttribute("data-theme") === "dark"
+    || (!document.documentElement.getAttribute("data-theme") && matchMedia("(prefers-color-scheme: dark)").matches);
+  const next = dark ? "light" : "dark";
+  applyTheme(next);
+  try { localStorage.setItem("spain-theme", next); } catch(e){}
+});
+</script>
+<script>
+/* ============================= POPPY ============================= */
+document.getElementById("poppy").innerHTML = `
+<h2 class="sec">Poppy’s paperwork</h2>
+<p class="lede">This is the part of the trip that can actually go wrong. Everything else is a nice dinner you might miss.</p>
+
+<div class="alert"><b>Three days out.</b> Four items are marked “Now” on the Poppy sheet and none of them are ticked: the written declaration that the move is non-commercial, the airline cabin forms, the Singapore import permit, and booking the vet appointment for the return certificate.</div>
+
+<div class="panel">
+  <h3 class="sub">Before you fly out — 12 November</h3>
+  <ul class="tick">
+    <li class="done">Rabies vaccination plus distemper, adenovirus and parvovirus — done 12 June</li>
+    <li class="done">RNATT rabies serology at an EU-approved lab — done 11 July. Valid from 90 days to 12 months before export</li>
+    <li class="done">AVS export permit, SG$50 — done. Valid 90 days from issue</li>
+    <li class="done">AVS dog licence, SG$15 — done</li>
+    <li class="done">EU animal health certificate from an accredited vet — 4 November, inside the 10-day window</li>
+    <li class="done">Endorsement of the certificate — applied 3 Nov, docs in by 4 Nov, collected 6 Nov</li>
+    <li>Written declaration that the relocation is non-commercial</li>
+    <li>Airline forms for carrying an animal in the cabin</li>
+    <li>Photocopies of every vaccination record and the microchip record</li>
+    <li>Confirm the microchip reads to ISO 11784/11785 — AVS requires it</li>
+  </ul>
+</div>
+
+<div class="panel">
+  <h3 class="sub">While you’re in Spain</h3>
+  <ul class="tick">
+    <li>Apply for the AVS import permit, SG$50, at pals.avs.gov.sg — within 90 days of arrival, takes 2 working days</li>
+    <li>Book the NParks border-control inspection — at least 5 days before you land. Avoid Mon–Sat 22:30–08:00, and Sundays and public holidays</li>
+    <li>Submit the declaration of facts to Singapore Customs for GST exemption — the permit is valid 10 working days from approval</li>
+    <li>Parasite treatment, internal and external, <b>between 2 and 7 days before export</b>. Export is 28 Nov, so the window is <b>21–26 November</b></li>
+    <li>Vet completes Sections I–III of the Singapore veterinary health certificate — not more than 7 days before export</li>
+    <li>Spanish government vet endorses Section IV of the same certificate</li>
+  </ul>
+</div>
+
+<div class="panel" style="border-color:var(--ochre)">
+  <h3 class="sub">The Madrid critical path</h3>
+  <div class="scroller"><table>
+    <tr><th>When</th><th>What</th><th>Collides with</th></tr>
+    <tr><td><b>Wed 25</b> AM</td><td>Vet visit — health certificate issued and CEXGAN submitted. Bring every document.</td><td>Prado at 10:00</td></tr>
+    <tr><td><b>Thu 26</b> AM</td><td>SVIF/PIF endorsement appointment. Poppy may need to come for inspection.</td><td>Tennis at 10:00</td></tr>
+    <tr><td><b>Fri 27</b></td><td>Buffer day if the endorsement hits a problem. Last weekday before the flight.</td><td>Malasaña and Gran Vía shopping</td></tr>
+    <tr><td><b>Sat 28</b></td><td>Fly MAD 16:55 with the endorsed certificate. At the airport by 13:30.</td><td>—</td></tr>
+  </table></div>
+  <p class="hint" style="margin-top:10px">Email <b>cexgan@tragsa.es</b> to confirm the SVIF process and lock the Madrid appointment. When you call Madrid vets, the two questions are: are you registered on CEXGAN, and have you done Singapore exports before?</p>
+</div>
+
+<div class="panel">
+  <h3 class="sub">Landing in Singapore</h3>
+  <ul class="tick">
+    <li>Present all papers at airline check-in in Madrid — you need a boarding pass or document showing a dog is travelling with you</li>
+    <li>At security, Poppy goes to staff in her carrier and is screened in a separate room</li>
+    <li>On arrival, drop her in the IATA-approved carrier at Lost and Found, then go to CAPQ (25–30 minutes from the airport) with all the papers to collect her</li>
+    <li>AVS inspection on arrival, then 10-day quarantine — Spain is a Category C country</li>
+  </ul>
+</div>
+`;
+
+/* ============================= LOGISTICS ============================= */
+document.getElementById("logistics").innerHTML = `
+<h2 class="sec">Cars, hotels and loose ends</h2>
+
+<div class="alert"><b>The rental table disagrees with the itinerary.</b> The separate rental sheet lists pickups at Barcelona Sants on 15 Nov, Seville Santa Justa on 17 Nov and Madrid Atocha on 26 Nov. The day-by-day plan uses Barcelona airport on the 13th, Seville airport on the 16th and Atocha on the 24th. Check which set of dates is actually on the bookings before you land.</div>
+
+<div class="panel">
+  <h3 class="sub">Car rentals</h3>
+  <div class="scroller"><table>
+    <tr><th>#</th><th>Out</th><th>Back</th><th>Doing</th><th>Est.</th></tr>
+    <tr><td>1</td><td>Barcelona, Fri 13 Nov 12:30</td><td>Barcelona, Mon 16 Nov by 12:30</td><td>City loop and the Montserrat day trip</td><td>€30–60</td></tr>
+    <tr><td>2</td><td>Seville airport, Mon 16 Nov</td><td>Málaga María Zambrano, Tue 24 Nov 09:30</td><td>Seville → Córdoba → Granada → Málaga, plus Ronda</td><td>€300–450</td></tr>
+    <tr><td>3</td><td>Madrid Atocha, Tue 24 Nov 14:00</td><td>Madrid-Barajas, Sat 28 Nov</td><td>Madrid, and Toledo or Segovia if you get a day</td><td>€100–160</td></tr>
+  </table></div>
+  <p class="hint">Rentals 2 and 3 need the ECO label for Madrid’s low-emission zone. Get it confirmed at the counter in writing, not over the phone.</p>
+</div>
+
+<div class="panel">
+  <h3 class="sub">Hotels</h3>
+  <div class="scroller"><table>
+    <tr><th>Nights</th><th>Hotel</th><th>Per night</th><th>Paid</th></tr>
+    <tr><td>13–16 Nov</td><td>Hotel Indigo Barcelona — Plaça Espanya</td><td>SG$206</td><td>SJ card</td></tr>
+    <tr><td>16–19 Nov</td><td>Legado Magdalena, Seville</td><td>SG$262.67</td><td>SJ card</td></tr>
+    <tr><td>19–21 Nov</td><td>NH Collection Granada Victoria</td><td>SG$285.64</td><td>Pay at hotel — ask about the upgrade</td></tr>
+    <tr><td>21–24 Nov</td><td>NH Málaga</td><td>SG$206.71</td><td>Pay at hotel</td></tr>
+    <tr><td>24–28 Nov</td><td>Hard Rock Hotel Madrid</td><td>SG$254.75</td><td>SJ card</td></tr>
+  </table></div>
+</div>
+
+<div class="panel">
+  <h3 class="sub">Still to book</h3>
+  <ul class="tick">
+    <li>7 Portes, Barcelona — Friday lunch, if you keep it</li>
+    <li>Tennis court in Barcelona for Sunday — CN Montjuïc needs 5 days, Vall Parc needs 2</li>
+    <li>Casa de Pilatos, Seville — marked “fully booked?!”, confirm or drop</li>
+    <li>Hammam Al Ándalus, Granada — Thursday 21:00, only if you still want it after a 3.5-hour drive</li>
+    <li>Real Sociedad de Tenis de Granada — €2, book the night before</li>
+    <li>Club de Tenis Málaga — €26, needs 3 days, so book by Wednesday 18th</li>
+    <li>Picasso Museum, Málaga — book online for Sunday opening</li>
+    <li>Kütral or Tragatá, Ronda — mention Poppy</li>
+    <li>Sobrino de Botín, Madrid — Thursday lunch, books out weeks ahead</li>
+    <li>Las Tortillas de Gabino, Madrid — Friday lunch</li>
+    <li>Sala de Despiece, Madrid — Friday dinner</li>
+    <li>Madrid tennis court via Playtomic — and move it off Thursday morning</li>
+    <li>Real Madrid home fixture — check the club site</li>
+    <li>Cancel one of the two Wednesday dinners in Madrid</li>
+  </ul>
+</div>
+
+<div class="panel">
+  <h3 class="sub">Sunset times, roughly</h3>
+  <p style="font-size:14.5px;margin:0 0 8px">Spain sits far west in its own time zone, so the sun goes down earlier than the clock suggests in late November. Every “sunset drink” in the original plan was scheduled after dark.</p>
+  <div class="scroller"><table>
+    <tr><th>City</th><th>Sunset, mid-to-late Nov</th><th>Be in place by</th></tr>
+    <tr><td>Barcelona</td><td>about 17:30</td><td>17:10</td></tr>
+    <tr><td>Seville</td><td>about 18:10</td><td>17:45</td></tr>
+    <tr><td>Granada</td><td>about 18:05</td><td>17:40</td></tr>
+    <tr><td>Málaga</td><td>about 18:10</td><td>17:45</td></tr>
+    <tr><td>Madrid</td><td>about 17:50</td><td>17:30</td></tr>
+  </table></div>
+  <p class="hint">Check the exact time the morning of — these shift by a few minutes across the fortnight.</p>
+</div>
+
+<div class="panel">
+  <h3 class="sub">About the listening links</h3>
+  <p style="font-size:14.5px;margin:0 0 8px">The Rick Steves links go to his free Spain &amp; Portugal audio tours — there are full self-guided walks for Barcelona, Seville and Madrid, and his TV episodes cover Granada and Córdoba. Download them to your phone before you leave; they work offline and they’re the single best thing to play in the car.</p>
+  <p style="font-size:14.5px;margin:0">The video and audio links open a search rather than one fixed clip, so they keep working as things get taken down and re-uploaded. Pick whatever looks good at the top.</p>
+</div>
+`;
+</script>
+</body>
+</html>
